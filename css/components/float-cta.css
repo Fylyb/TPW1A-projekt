@@ -1,0 +1,18 @@
+  .float-cta{
+   position:fixed;
+   left:20px;
+   bottom:20px;
+   z-index:90;
+   display:inline-flex;
+   align-items:center;
+   gap:10px;
+   padding:12px 16px;
+   border-radius:10px;
+   box-shadow:0 10px 30px rgba(0,0,0,.6);
+   transition:transform .14s ease,box-shadow .14s ease;
+  }
+ .float-cta:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 40px rgba(0,0,0,.7);
+}
+ @media(max-width:480px){ .float-cta{left:12px;bottom:12px;padding:10px 12px} }

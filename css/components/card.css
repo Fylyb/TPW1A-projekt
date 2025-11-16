@@ -1,0 +1,53 @@
+.card{background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);border:1px solid rgba(255,255,255,.03);border-radius:10px;overflow:hidden}
+  .card.info-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+  .card.info.box h4 { margin: 0; }
+  .trainer-img{height:240px;border-radius:8px;overflow:hidden;background-color:#0b1220;display:block}
+  .trainer-img img{width:100%;height:100%;object-fit:cover;display:block;border:0}
+  .card > div { padding: 24px !important; }
+  .card h3 { margin: 18px 0 10px; }
+  .card .muted { margin-bottom: 10px; display:block; }
+  .pricing-card .features li { margin-bottom:10px; color:inherit; }
+
+  .pricing-card {
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+  }
+  .grid.cols-3 > .pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.55);
+  }
+  .grid.cols-3 > .pricing-card:nth-child(1):hover,
+  .grid.cols-3 > .pricing-card:nth-child(2):hover,
+  .grid.cols-3 > .pricing-card:nth-child(3):hover {
+    background: var(--accent);
+    border-color: #c05621;
+    color: #000;
+  }
+  .grid.cols-3 > .pricing-card:hover,
+  .grid.cols-3 > .pricing-card:hover .features,
+  .grid.cols-3 > .pricing-card:hover .features li span {
+    color: #000 !important;
+  }
+  .grid.cols-3 > .pricing-card:hover h3,
+  .grid.cols-3 > .pricing-card:hover .price,
+  .grid.cols-3 > .pricing-card:hover gz-button {
+    color: #000 !important;
+  }
+  .grid.cols-3 > .pricing-card:hover gz-button.btn.btn-primary,
+  .grid.cols-3 > .pricing-card:hover .btn.btn-primary {
+    background: #fff !important;
+    color: #000 !important;
+    border-color: rgba(0,0,0,.08) !important;
+    box-shadow: none !important;
+    --btn-bg: #fff;
+    --btn-color: #000;
+  }
+  .grid.cols-3 > .pricing-card:hover .popular-badge { background: rgba(0,0,0,.6); color:var(--accent); border-color: rgba(249,115,22,.2); }
+  .price{font-size:34px;font-weight:700}
+  .features{list-style:none;padding:0;margin:0}
+  .popular-badge{position:absolute;left:50%;transform:translateX(-50%) translateY(-50%);top:0;background:#000;color:var(--accent);padding:6px 12px;border-radius:999px;font-weight:700;border:1px solid rgba(249,115,22,.2)};

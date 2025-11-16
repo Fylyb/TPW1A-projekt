@@ -1,0 +1,6 @@
+.grid{display:grid;gap:20px}
+  .grid.md-2 { align-items:stretch; }
+  .grid.md-2 > * { min-height: 0; }
+  .rounded-lg > div { width:100%; height:100%; background-size: cover; background-position: center; display: block;}
+  .rounded-lg {width: 100%; display: block;}
+  @media(min-width:768px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.md-2{grid-template-columns:repeat(2,1fr)} }

@@ -1,0 +1,10 @@
+:root{
+  --section-vertical: 96px;
+  --section-vertical-lg: 120px;
+  --section-gap-between: 28px;
+  --section-intro-max: 780px;
+  --bg:#000;
+  --muted:#9ca3af;
+  --accent:#f97316;
+  --max-w:1200px;
+}

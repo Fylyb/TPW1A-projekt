@@ -1,0 +1,28 @@
+.hero{
+    position:relative;
+    min-height:100vh;
+    padding-top:80px;
+    display:flex;
+    align-items:center
+}
+  .hero .bg{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    filter:contrast(.9) saturate(1.02)
+}
+  .hero .overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.82) 45%, rgba(0,0,0,0.35) 100%)
+}
+  .hero .content{
+    position:relative;
+    z-index:3;
+    padding:60px 0
+}
+  .hero h1{
+    font-size:44px;
+    margin:0 0 10px
+}

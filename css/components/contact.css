@@ -1,0 +1,30 @@
+#contact .grid.md-2 { gap: 12px; align-items: stretch; }
+
+.contact-column { height: 400px; display:flex; flex-direction:column; justify-content:space-between; }
+
+.contact-list { display: grid; gap: 14px; }
+
+.contact-item { display:flex; gap:12px; align-items:flex-start; }
+.contact-icon {
+  width:48px;
+  height:48px;
+  background:var(--accent);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  color:#fff;
+}
+.contact-content h4 { margin:0 0 6px; font-size:16px; }
+.contact-content .muted { margin-bottom:4px; }
+
+.contact-image { height:360px; overflow:hidden; margin-left:100px; }
+.contact-image > div { width:100%; height:100%; background-size:cover; background-position:center; }
+
+.card.info-box { background:#18181B; padding:18px; margin-top:20px; }
+
+@media(max-width:920px){
+  .contact-image { margin-left:0; margin-top:18px; }
+  .contact-column { height:auto; }
+}
