@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>GymZone — Demo</title>
+<link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="brand" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 12h2m16 0h2M6 8v8M18 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 9h4v6h-4z" fill="currentColor" />
+      </svg>
+      <span>GymZone</span>
+    </div>
+
+    <div class="menu-desktop" role="menubar" aria-label="Main">
+      <button onclick="scrollToSection('home')">Domů</button>
+      <button onclick="scrollToSection('about')">O nás</button>
+      <button onclick="scrollToSection('trainers')">Trenéři</button>
+      <button onclick="scrollToSection('pricing')">Ceník</button>
+      <button onclick="scrollToSection('contact')">Kontakt</button>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
+      <span id="menuIcon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <div class="container" style="display:flex;flex-direction:column;gap:8px">
+      <button onclick="scrollToSection('home')">Domů</button>
+      <button onclick="scrollToSection('about')">O nás</button>
+      <button onclick="scrollToSection('trainers')">Trenéři</button>
+      <button onclick="scrollToSection('pricing')">Ceník</button>
+      <button onclick="scrollToSection('contact')">Kontakt</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="bg" id="heroBg" style="background-image:url('https://images.unsplash.com/photo-1573858129038-6f98c3cb2ac7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600');"></div>
+    <div class="overlay"></div>
+
+    <div class="container content">
+      <div style="max-width:700px">
+        <h1>GymZone</h1>
+        <p style="color:var(--accent);margin:0 0 30px;font-weight:600">Tvoje cesta k dokonalé kondici začíná zde</p>
+        <p style="color:#e5e7eb;max-width:680px;line-height:1.5;margin-bottom:30px">Nejmodernější vybavení, profesionální trenéři a motivující prostředí pro dosažení tvých fitness cílů.</p>
+        <gz-button class="btn btn-primary" onclick="scrollToSection('pricing')">Začít trénovat</gz-button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="background:#18181B;">
+    <div class="container">
+      <div class="grid md-2" style="gap:30px;align-items:center">
+        <div>
+          <h2 class="section-title">O nás</h2>
+          <p class="muted">GymZone je moderní fitness centrum, které nabízí kompletní zázemí pro tvé tréninky. Jsme tu od roku 2015 a pomohli jsme stovkám klientů dosáhnout jejich fitness cílů.</p>
+
+          <p class="muted">Naše posilovna je vybavena nejmodernějšími stroji a cvičebními pomůckami. Nabízíme širokou škálu služeb včetně osobního tréninku, skupinových lekcí a výživového poradenství.</p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px">
+            <div style="text-align:center"><div style="color:var(--accent);font-weight:500">500+</div><div class="muted">Členů</div></div>
+            <div style="text-align:center"><div style="color:var(--accent);font-weight:500">10+</div><div class="muted">Trenérů</div></div>
+            <div style="text-align:center"><div style="color:var(--accent);font-weight:500">1000m²</div><div class="muted">Prostor</div></div>
+          </div>
+        </div>
+
+        <div class="rounded-lg" style="height:360px;overflow:hidden">
+          <div class="" style="background-image:url('https://images.unsplash.com/photo-1584827387150-8ae4caebe906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600');height:100%;background-size:cover;background-position:center"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINERS (cards use gz-card) -->
+  <section id="trainers">
+    <div class="container">
+      <h2 class="section-title text-center">Naši trenéři</h2>
+      <p class="muted text-center mb-6">Profesionální tým...</p>
+
+      <div class="grid cols-3">
+        <gz-card class="card">
+          <div style="padding:18px">
+            <div class="trainer-img"><img src="https://images.unsplash.com/photo-1758875568756-37a9c5c1a4f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600" alt="Jan Novák"></div>
+            <h3 style="margin:14px 0 6px">Jan Novák</h3>
+            <div style="color:var(--accent);margin-bottom:6px">Osobní trenér & Výživa</div>
+            <div class="muted" style="margin-bottom:8px">8 let zkušeností</div>
+            <div style="color:#cbd5e1">Specialista na sílu a budování svalové hmoty</div>
+          </div>
+        </gz-card>
+
+        <gz-card class="card">
+          <div style="padding:18px">
+            <div class="trainer-img"><img src="https://images.unsplash.com/photo-1758875568756-37a9c5c1a4f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600" alt="Petra Svobodová"></div>
+            <h3 style="margin:14px 0 6px">Petra Svobodová</h3>
+            <div style="color:var(--accent);margin-bottom:6px">Fitness instruktorka</div>
+            <div class="muted" style="margin-bottom:8px">6 let zkušeností</div>
+            <div style="color:#cbd5e1">Odbornice na funkční trénink a kardio</div>
+          </div>
+        </gz-card>
+
+        <gz-card class="card">
+          <div style="padding:18px">
+            <div class="trainer-img"><img src="https://images.unsplash.com/photo-1758875568756-37a9c5c1a4f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600" alt="Martin Dvořák"></div>
+            <h3 style="margin:14px 0 6px">Martin Dvořák</h3>
+            <div style="color:var(--accent);margin-bottom:6px">CrossFit trenér</div>
+            <div class="muted" style="margin-bottom:8px">10 let zkušeností</div>
+            <div style="color:#cbd5e1">Mistr v silových disciplínách a kondici</div>
+          </div>
+        </gz-card>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" style="background:#18181B;">
+    <div class="container">
+        <h2 class="section-title text-center">Ceník</h2>
+        <p class="muted text-center mb-6">Vyberte si členství...</p>
+
+        <div class="grid cols-3">
+            <div class="card pricing-card">
+                <div style="padding:18px; display: flex; flex-direction: column; justify-content: space-between; height: 100%">
+                    <h3 class="text-center" style="margin-bottom:12px">Základní</h3>
+                    <div class="text-center mb-6"><span class="price" style="color:var(--accent)">690</span><small>Kč/měsíc</small></div>
+                    <ul class="features mb-6">
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Neomezený vstup do posilovny</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Přístup k šatnám a sprchám</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Základní fitness konzultace</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Wi-Fi zdarma</li>
+                    </ul>
+                    <gz-button class="btn btn-primary" onclick="scrollToSection('contact')" style="width: 150px">Vybrat balíček</gz-button>
+                </div>
+            </div>
+
+            <div class="card pricing-card">
+                <div style="padding:18px; display: flex; flex-direction: column; justify-content: space-between; height: 100%">
+                    <h3 class="text-center" style="margin-bottom:12px">Premium</h3>
+                    <div class="text-center mb-6"><span class="price" style="color:var(--accent)">1290</span><small>Kč/měsíc</small></div>
+                    <ul class="features mb-6">
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Vše ze Základního balíčku</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>4x osobní trénink měsíčně</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Přístup ke skupinovým lekcím</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Výživové poradenství</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Sauna a wellness</li>
+                    </ul>
+                    <gz-button class="btn btn-primary" onclick="scrollToSection('contact')" style="width: 150px">Vybrat balíček</gz-button>
+                </div>
+            </div>
+
+            <div class="card pricing-card">
+                <div style="padding:18px; display: flex; flex-direction: column; justify-content: space-between; height: 100%">
+                    <h3 class="text-center" style="margin-bottom:12px;color:#fff">VIP</h3>
+                    <div class="text-center mb-6"><span class="price" style="color:var(--accent)">2490</span><small>Kč/měsíc</small></div>
+                    <ul class="features mb-6">
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Vše z Premium balíčku</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>8x osobní trénink měsíčně</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Individuální tréninkový plán</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Individuální výživový plán</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Masáže a regenerace</li>
+                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Přednostní rezervace</li>
+                    </ul>
+                    <gz-button class="btn btn-primary" onclick="scrollToSection('contact')" style="width: 150px">Vybrat balíček</gz-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title text-center">Kontakt</h2>
+      <p class="muted text-center mb-6">Jsme tu pro vás. Neváhejte nás kontaktovat!</p>
+
+      <div class="grid md-2">
+        <div class="contact-column">
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="./assets/icons/phone.svg" alt="Telefon" class="icon" width="20" height="20" />
+              </div>
+              <div class="contact-content">
+                <h4>Telefon</h4>
+                <div class="muted">+420 777 123 456</div>
+                <div style="color:#cbd5e1">Po‑Pá: 6:00 - 22:00</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="./assets/icons/email.svg" alt="Email" class="icon" width="20" height="20" />
+              </div>
+              <div class="contact-content">
+                <h4>Email</h4>
+                <div class="muted">info@gymzone.cz</div>
+                <div style="color:#cbd5e1">Odpovíme do 24 hodin</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <img src="./assets/icons/pin.svg" alt="Adresa" class="icon" width="18" height="18" />
+              </div>
+              <div class="contact-content">
+                <h4>Adresa</h4>
+                <div class="muted">Sportovní 123</div>
+                <div class="muted">Praha 1, 110 00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card info-box">
+            <div style="margin-bottom:-40px">Otevírací doba</div>
+            <div style="display:grid;gap:8px">
+              <div style="display:flex;justify-content:space-between;color:var(--muted)"><span>Pondělí - Pátek</span><span style="color:#fff">6:00 - 22:00</span></div>
+              <div style="display:flex;justify-content:space-between;color:var(--muted)"><span>Sobota - Neděle</span><span style="color:#fff">8:00 - 20:00</span></div>
+              <div style="display:flex;justify-content:space-between;color:var(--muted)"><span>Svátky</span><span style="color:#fff">9:00 - 18:00</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-image rounded-lg">
+          <div style="background-image:url('https://images.unsplash.com/photo-1532383282788-19b341e3c422?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600');"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:8px">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h2m16 0h2M6 8v8M18 8v8" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 9h4v6h-4z" fill="currentColor" /></svg>
+      <div>GymZone © 2025</div>
+    </div>
+    <div class="muted">Jedná se o fiktivní webovou stránku pro fitness centrum v rámci studentského projektu.</div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    function setMenu(open){
+      menuToggle.setAttribute('aria-expanded', String(open));
+      mobileMenu.style.display = open ? 'block' : 'none';
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+      menuIcon.innerHTML = open ? '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6" stroke-linecap="round"/></svg>' :
+                                  '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>';
+    }
+    menuToggle.addEventListener('click', ()=> setMenu(menuToggle.getAttribute('aria-expanded') === 'true' ? false : true));
+    window.addEventListener('resize', ()=> { if(window.innerWidth >= 768) setMenu(false); });
+
+    window.scrollToSection = function(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.scrollIntoView({behavior:'smooth',block:'start'});
+      if(menuToggle.getAttribute('aria-expanded') === 'true') setMenu(false);
+    };
+
+    window.addEventListener('load', ()=> {
+      document.querySelectorAll('image-with-fallback').forEach(c => c.init && c.init());
+    });
+
+    const heroBg = document.getElementById('heroBg');
+    if(heroBg){
+      const url = heroBg.style.backgroundImage.slice(5,-2);
+      const img = new Image();
+      img.src = url;
+      img.onload = ()=> heroBg.style.backgroundImage = 'url(\"' + img.src + '\")';
+    }
+  })();
+</script>
+
+</body>
+</html>
