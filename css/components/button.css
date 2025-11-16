@@ -1,0 +1,15 @@
+.btn {
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 16px;
+    border-radius:8px;
+    border:0;
+    cursor:pointer;
+    font-weight:600
+}
+
+.btn-primary {
+    background:var(--accent);
+    color:#fff
+}
