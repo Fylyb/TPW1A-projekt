@@ -1,3 +1,10 @@
-  section{padding:72px 0}
-  .section-title{font-size:28px;margin:0 0 12px}
-  .muted{color:var(--muted)}
+section {
+  padding:var(--space-xxl-plus) 0;
+}
+.section-title {
+  font-size:var(--font-size-section-title);
+  margin:0 0 var(--space-s);
+}
+.muted {
+  color:var(--muted);
+}
