@@ -1,37 +1,44 @@
 section{
-  padding:96px 0;
-  scroll-margin-top:60px
+  padding:var(--section-vertical) 0;
+  scroll-margin-top:var(--h-nav-default);
 }
-
 @media(min-width:1024px){
   section{
-    padding:120px 0;
-    scroll-margin-top:120px;
+    padding:var(--section-vertical-lg) 0;
+    scroll-margin-top:var(--section-vertical-lg);
   }
 }
-
 .section-title{
-  font-size:28px;
-  margin:0 0 10px;
-  line-height:1.1;
-  letter-spacing:0.2px;
+  font-size:var(--size-font-section-title);
+  margin:0 0 var(--space-s);
+  line-height:var(--lh-section-title);
+  letter-spacing:var(--ls-light);
 }
-
-.text-center{ text-align:center; }
-.mb-6{ margin-bottom:16px; }
-
+.text-center {
+  text-align:center;
+}
+.mb-6{
+  margin-bottom:var(--space-m);
+}
 section .container > .section-intro,
 section .container > .text-center + .mb-6 {
   margin-left:auto;
   margin-right:auto;
-  max-width:780px;
+  max-width:var(--section-intro-max);
 }
-
-.section-title + .muted { margin-top:4px; }
-
-section + section { margin-top:12px; }
-
+.section-title + .muted {
+  margin-top:var(--space-2xs);
+}
+section + section {
+  margin-top:var(--space-s);
+}
 #trainers .section-title,
-#trainers .muted { display:block; margin-left:auto; margin-right:auto; max-width:720px; }
-
-section .grid { margin-top:12px; }
+#trainers .muted {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:var(--max-w-trainer-intro);
+}
+section .grid {
+  margin-top:var(--space-s);
+}
