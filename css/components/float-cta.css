@@ -15,4 +15,10 @@
   transform:translateY(-3px);
   box-shadow:0 var(--space-m) var(--shadow-l-hover) var(--bg);
 }
-@media(max-width:480px){ .float-cta{left:var(--space-s);bottom:var(--space-s);padding:var(--space-s-minus) var(--space-s)} }
+@media(max-width:480px) {
+  .float-cta {
+    left:var(--space-s);
+    bottom:var(--space-s);
+    padding:var(--space-s-minus) var(--space-s)
+  }
+}
