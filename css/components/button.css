@@ -1,5 +1,6 @@
 .btn {
     display:inline-flex;
+    text-decoration: none;
     align-items:center;
     gap: var(--space-s);
     padding: var(--space-s) var(--space-m);
