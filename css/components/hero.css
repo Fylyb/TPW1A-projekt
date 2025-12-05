@@ -1,28 +1,28 @@
 .hero{
     position:relative;
-    min-height:100vh;
-    padding-top:80px;
+    min-height:var(--h-full-viewpoert);
+    padding-top:var(--space-huge-minus);
     display:flex;
-    align-items:center
+    align-items:center;
 }
   .hero .bg{
     position:absolute;
     inset:0;
     background-size:cover;
     background-position:center;
-    filter:contrast(.9) saturate(1.02)
+    filter:var(--filter-hero-bg);
 }
   .hero .overlay{
     position:absolute;
     inset:0;
-    background:linear-gradient(90deg,rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.82) 45%, rgba(0,0,0,0.35) 100%)
+    background:var(--gradient-hero-overlay);
 }
   .hero .content{
     position:relative;
     z-index:3;
-    padding:60px 0
+    padding:var(--space-xxl) 0;
 }
   .hero h1{
-    font-size:44px;
-    margin:0 0 10px
+    font-size:var(--hero-size-hero-h1);
+    margin:0 0 var(--space-s-minus);
 }
