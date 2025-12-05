@@ -5,87 +5,99 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>GymZone — Demo</title>
 <link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/utilities/utilities.css" />
+<script src="./js/main.js" defer></script>
 </head>
 <body>
 
-<nav>
-  <div class="container nav-inner">
-    <div class="brand" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M2 12h2m16 0h2M6 8v8M18 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M10 9h4v6h-4z" fill="currentColor" />
-      </svg>
-      <span>GymZone</span>
-    </div>
-
-    <div class="menu-desktop" role="menubar" aria-label="Main">
-      <button onclick="scrollToSection('home')">Domů</button>
-      <button onclick="scrollToSection('about')">O nás</button>
-      <button onclick="scrollToSection('trainers')">Trenéři</button>
-      <button onclick="scrollToSection('pricing')">Ceník</button>
-      <button onclick="scrollToSection('contact')">Kontakt</button>
-    </div>
-
-    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
-      <span id="menuIcon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/>
+<header> 
+  <nav>
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="GymZone-Domů">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 12h2m16 0h2M6 8v8M18 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 9h4v6h-4z" fill="currentColor" />
         </svg>
-      </span>
-    </button>
-  </div>
+        <span>GymZone</span>
+      </a>
 
-  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-    <div class="container" style="display:flex;flex-direction:column;gap:8px">
-      <button onclick="scrollToSection('home')">Domů</button>
-      <button onclick="scrollToSection('about')">O nás</button>
-      <button onclick="scrollToSection('trainers')">Trenéři</button>
-      <button onclick="scrollToSection('pricing')">Ceník</button>
-      <button onclick="scrollToSection('contact')">Kontakt</button>
+      <ul class="menu-desktop" aria-label="Hlavní navigace">
+        <li><a href="#home">Domů</a></li>
+        <li><a href="#about">O nás</a></li>
+        <li><a href="#trainers">Trenéři</a></li>
+        <li><a href="#pricing">Ceník</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
+        <span id="menuIcon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </button>
     </div>
-  </div>
-</nav>
+
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <ul class="container flex flex-col gap-2" aria-label="Mobilní navigace">
+        <li><a href="#home">Domů</a></li>
+        <li><a href="#about">O nás</a></li>
+        <li><a href="#trainers">Trenéři</a></li>
+        <li><a href="#pricing">Ceník</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
 <main>
-  <!-- HERO -->
   <section id="home" class="hero">
-    <div class="bg" id="heroBg" style="background-image:url('https://images.unsplash.com/photo-1573858129038-6f98c3cb2ac7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600');"></div>
+    <div class="bg bg-cover bg-center hero-bg" id="heroBg"></div>
     <div class="overlay"></div>
 
     <div class="container content">
-      <div style="max-width:700px">
+      <div class="max-w-700">
         <h1>GymZone</h1>
-        <p style="color:var(--accent);margin:0 0 30px;font-weight:600">Tvoje cesta k dokonalé kondici začíná zde</p>
-        <p style="color:#e5e7eb;max-width:680px;line-height:1.5;margin-bottom:30px">Nejmodernější vybavení, profesionální trenéři a motivující prostředí pro dosažení tvých fitness cílů.</p>
-        <gz-button class="btn btn-primary" onclick="scrollToSection('pricing')" style="color: #000;">Začít trénovat</gz-button>
+        <p class="text-accent mb-30 fw-600">Tvoje cesta k dokonalé kondici začíná zde</p>
+        <p class="muted-light leading-15 mb-30 max-w-md">Nejmodernější vybavení, profesionální trenéři a motivující prostředí pro dosažení tvých fitness cílů.</p>
+        <gz-button class="btn btn-primary btn-w-150 text-black" onclick="scrollToSection('pricing')">Začít trénovat</gz-button>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" style="background:#18181B;">
+  <section id="about" class="bg-secondary">
     <div class="container">
-      <div class="grid md-2" style="gap:30px;align-items:center">
+      <div class="grid md-2 gap-30 items-center">
         <div>
           <h2 class="section-title">O nás</h2>
           <p class="muted">GymZone je moderní fitness centrum, které nabízí kompletní zázemí pro tvé tréninky. Jsme tu od roku 2015 a pomohli jsme stovkám klientů dosáhnout jejich fitness cílů.</p>
 
           <p class="muted">Naše posilovna je vybavena nejmodernějšími stroji a cvičebními pomůckami. Nabízíme širokou škálu služeb včetně osobního tréninku, skupinových lekcí a výživového poradenství.</p>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px">
-            <div style="text-align:center"><div style="color:var(--accent);font-weight:500">500+</div><div class="muted">Členů</div></div>
-            <div style="text-align:center"><div style="color:var(--accent);font-weight:500">10+</div><div class="muted">Trenérů</div></div>
-            <div style="text-align:center"><div style="color:var(--accent);font-weight:500">1000m²</div><div class="muted">Prostor</div></div>
+          <div class="grid grid-3-sm gap-3 mt-18">
+            <div class="stat">
+              <div class="stat-value">500+</div>
+              <div class="stat-label muted">Členů</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-value">10+</div>
+              <div class="stat-label muted">Trenérů</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-value">1000m²</div>
+              <div class="stat-label muted">Prostor</div>
+            </div>
           </div>
         </div>
 
-        <div class="rounded-lg" style="height:360px;overflow:hidden">
-          <div class="" style="background-image:url('https://images.unsplash.com/photo-1584827387150-8ae4caebe906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600');height:100%;background-size:cover;background-position:center"></div>
+        <div class="rounded-lg h-360 overflow-hidden">
+          <div class="h-full bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1584827387150-8ae4caebe906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600');"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRAINERS (cards use gz-card) -->
   <section id="trainers">
     <div class="container">
       <h2 class="section-title text-center">Naši trenéři</h2>
@@ -93,94 +105,92 @@
 
       <div class="grid cols-3">
         <gz-card class="card">
-          <div style="padding:18px">
-            <div class="trainer-img"><img src="https://images.unsplash.com/photo-1758875568756-37a9c5c1a4f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600" alt="Jan Novák"></div>
-            <h3 style="margin:14px 0 6px">Jan Novák</h3>
-            <div style="color:var(--accent);margin-bottom:6px">Osobní trenér & Výživa</div>
-            <div class="muted" style="margin-bottom:8px">8 let zkušeností</div>
-            <div style="color:#cbd5e1">Specialista na sílu a budování svalové hmoty</div>
+          <div class="p-18">
+            <div class="trainer-img"><img src="./assets/pics/trainer1.jpg" alt="Jan Novák"></div>
+            <h3 class="mt-xl mb-s">Jan Novák</h3>
+            <div class="text-accent mb-s">Osobní trenér & Výživa</div>
+            <div class="muted mb-m">8 let zkušeností</div>
+            <div class="text-light">Specialista na sílu a budování svalové hmoty</div>
           </div>
         </gz-card>
 
         <gz-card class="card">
-          <div style="padding:18px">
-            <div class="trainer-img"><img src="https://images.unsplash.com/photo-1758875568756-37a9c5c1a4f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600" alt="Petra Svobodová"></div>
-            <h3 style="margin:14px 0 6px">Petra Svobodová</h3>
-            <div style="color:var(--accent);margin-bottom:6px">Fitness instruktorka</div>
-            <div class="muted" style="margin-bottom:8px">6 let zkušeností</div>
-            <div style="color:#cbd5e1">Odbornice na funkční trénink a kardio</div>
+          <div class="p-18">
+            <div class="trainer-img"><img src="./assets/pics/trainer2.jpg" alt="Petra Svobodová"></div>
+            <h3 class="mt-xl mb-s">Petra Svobodová</h3>
+            <div class="text-accent mb-s">Fitness instruktorka</div>
+            <div class="muted mb-m">6 let zkušeností</div>
+            <div class="text-light">Odbornice na funkční trénink a kardio</div>
           </div>
         </gz-card>
 
         <gz-card class="card">
-          <div style="padding:18px">
-            <div class="trainer-img"><img src="https://images.unsplash.com/photo-1758875568756-37a9c5c1a4f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600" alt="Martin Dvořák"></div>
-            <h3 style="margin:14px 0 6px">Martin Dvořák</h3>
-            <div style="color:var(--accent);margin-bottom:6px">CrossFit trenér</div>
-            <div class="muted" style="margin-bottom:8px">10 let zkušeností</div>
-            <div style="color:#cbd5e1">Mistr v silových disciplínách a kondici</div>
+          <div class="p-18">
+            <div class="trainer-img"><img src="./assets/pics/trainer3.jpg" alt="Martin Dvořák"></div>
+            <h3 class="mt-xl mb-s">Martin Dvořák</h3>
+            <div class="text-accent mb-s">CrossFit trenér</div>
+            <div class="muted mb-m">10 let zkušeností</div>
+            <div class="text-light">Mistr v silových disciplínách a kondici</div>
           </div>
         </gz-card>
       </div>
     </div>
   </section>
 
-  <section id="pricing" style="background:#18181B;">
+  <section id="pricing" class="bg-secondary">
     <div class="container">
         <h2 class="section-title text-center">Ceník</h2>
         <p class="muted text-center mb-6">Vyberte si členství...</p>
 
         <div class="grid cols-3">
             <div class="card pricing-card">
-                <div style="padding:18px; display: flex; flex-direction: column; justify-content: space-between; height: 100%">
-                    <h3 class="text-center" style="margin-bottom:12px">Základní</h3>
-                    <div class="text-center mb-6"><span class="price" style="color:var(--accent)">690</span><small>Kč/měsíc</small></div>
+                <div class="p-18 flex flex-col justify-between h-full">
+                    <h3 class="text-center mb-l">Základní</h3>
+                    <div class="text-center mb-6"><span class="price text-accent">690</span><small>Kč/měsíc</small></div>
                     <ul class="features mb-6">
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Neomezený vstup do posilovny</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Přístup k šatnám a sprchám</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Základní fitness konzultace</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Wi-Fi zdarma</li>
+                        <li><span class="checkmark">✓</span>Neomezený vstup do posilovny</li>
+                        <li><span class="checkmark">✓</span>Přístup k šatnám a sprchám</li>
+                        <li><span class="checkmark">✓</span>Základní fitness konzultace</li>
+                        <li><span class="checkmark">✓</span>Wi-Fi zdarma</li>
                     </ul>
-                    <gz-button class="btn btn-primary" onclick="scrollToSection('contact')" style="width: 150px; color: #000;">Vybrat balíček</gz-button>
+                    <gz-button class="btn btn-primary btn-w-150 text-black" onclick="scrollToSection('contact')">Vybrat balíček</gz-button>
                 </div>
             </div>
 
             <div class="card pricing-card">
-                <div style="padding:18px; display: flex; flex-direction: column; justify-content: space-between; height: 100%">
-                    <h3 class="text-center" style="margin-bottom:12px">Premium</h3>
-                    <div class="text-center mb-6"><span class="price" style="color:var(--accent)">1290</span><small>Kč/měsíc</small></div>
+                <div class="p-18 flex flex-col justify-between h-full">
+                    <h3 class="text-center mb-l">Premium</h3>
+                    <div class="text-center mb-6"><span class="price text-accent">1290</span><small>Kč/měsíc</small></div>
                     <ul class="features mb-6">
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Vše ze Základního balíčku</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>4x osobní trénink měsíčně</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Přístup ke skupinovým lekcím</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Výživové poradenství</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Sauna a wellness</li>
+                        <li><span class="checkmark">✓</span>Vše ze Základního balíčku</li>
+                        <li><span class="checkmark">✓</span>4x osobní trénink měsíčně</li>
+                        <li><span class="checkmark">✓</span>Přístup ke skupinovým lekcím</li>
+                        <li><span class="checkmark">✓</span>Výživové poradenství</li>
+                        <li><span class="checkmark">✓</span>Sauna a wellness</li>
                     </ul>
-                    <gz-button class="btn btn-primary" onclick="scrollToSection('contact')" style="width: 150px; color: #000;">Vybrat balíček</gz-button>
+                    <gz-button class="btn btn-primary btn-w-150 text-black" onclick="scrollToSection('contact')">Vybrat balíček</gz-button>
                 </div>
             </div>
 
             <div class="card pricing-card">
-                <div style="padding:18px; display: flex; flex-direction: column; justify-content: space-between; height: 100%">
-                    <h3 class="text-center" style="margin-bottom:12px;color:#fff">VIP</h3>
-                    <div class="text-center mb-6"><span class="price" style="color:var(--accent)">2490</span><small>Kč/měsíc</small></div>
+                <div class="p-18 flex flex-col justify-between h-full">
+                    <h3 class="text-center mb-l">VIP</h3>
+                    <div class="text-center mb-6"><span class="price text-accent">2490</span><small>Kč/měsíc</small></div>
                     <ul class="features mb-6">
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Vše z Premium balíčku</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>8x osobní trénink měsíčně</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Individuální tréninkový plán</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Individuální výživový plán</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Masáže a regenerace</li>
-                        <li><span style="color:var(--accent);margin-right:8px">✓</span>Přednostní rezervace</li>
+                        <li><span class="checkmark">✓</span>Vše z Premium balíčku</li>
+                        <li><span class="checkmark">✓</span>8x osobní trénink měsíčně</li>
+                        <li><span class="checkmark">✓</span>Individuální tréninkový plán</li>
+                        <li><span class="checkmark">✓</span>Individuální výživový plán</li>
+                        <li><span class="checkmark">✓</span>Masáže a regenerace</li>
+                        <li><span class="checkmark">✓</span>Přednostní rezervace</li>
                     </ul>
-                    <gz-button class="btn btn-primary" onclick="scrollToSection('contact')" style="width: 150px; color: #000;">Vybrat balíček</gz-button>
+                    <gz-button class="btn btn-primary btn-w-150 text-black" onclick="scrollToSection('contact')">Vybrat balíček</gz-button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-
-  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title text-center">Kontakt</h2>
@@ -196,7 +206,7 @@
               <div class="contact-content">
                 <h4>Telefon</h4>
                 <div class="muted">+420 777 123 456</div>
-                <div style="color:#cbd5e1">Po‑Pá: 6:00 - 22:00</div>
+                <div class="text-light">Po‑Pá: 6:00 - 22:00</div>
               </div>
             </div>
 
@@ -207,7 +217,7 @@
               <div class="contact-content">
                 <h4>Email</h4>
                 <div class="muted">info@gymzone.cz</div>
-                <div style="color:#cbd5e1">Odpovíme do 24 hodin</div>
+                <div class="text-light">Odpovíme do 24 hodin</div>
               </div>
             </div>
 
@@ -224,11 +234,11 @@
           </div>
 
           <div class="card info-box">
-            <div style="margin-bottom:-40px">Otevírací doba</div>
-            <div style="display:grid;gap:8px">
-              <div style="display:flex;justify-content:space-between;color:var(--muted)"><span>Pondělí - Pátek</span><span style="color:#fff">6:00 - 22:00</span></div>
-              <div style="display:flex;justify-content:space-between;color:var(--muted)"><span>Sobota - Neděle</span><span style="color:#fff">8:00 - 20:00</span></div>
-              <div style="display:flex;justify-content:space-between;color:var(--muted)"><span>Svátky</span><span style="color:#fff">9:00 - 18:00</span></div>
+            <div class="mb-neg-40">Otevírací doba</div>
+            <div class="d-grid gap-xs">
+              <div class="row-between text-muted"><span>Pondělí - Pátek</span><span class="text-white">6:00 - 22:00</span></div>
+              <div class="row-between text-muted"><span>Sobota - Neděle</span><span class="text-white">8:00 - 20:00</span></div>
+              <div class="row-between text-muted"><span>Svátky</span><span class="text-white">9:00 - 18:00</span></div>
             </div>
           </div>
         </div>
@@ -241,51 +251,25 @@
   </section>
 </main>
 
+<div class="map-wrapper">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1076.2978652008524!2d14.41574269356203!3d50.08849314068187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1scs!2scz!4v1763464537759!5m2!1scs!2scz"
+    class="map-iframe"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
 <footer>
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-    <div style="display:flex;align-items:center;gap:8px">
+  <div class="container footer-inner gap-l">
+    <div class="disclaimer">Jedná se o fiktivní webovou stránku pro fitness centrum v rámci studentského projektu.</div>
+    <span class="text-light text-muted">Poslední aktualizace: 05-12-2025</span>
+    <div class="flex items-center gap-m">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h2m16 0h2M6 8v8M18 8v8" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 9h4v6h-4z" fill="currentColor" /></svg>
       <div>GymZone © 2025</div>
     </div>
-    <div class="muted">Jedná se o fiktivní webovou stránku pro fitness centrum v rámci studentského projektu.</div>
   </div>
 </footer>
-
-<script>
-  (function(){
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-    function setMenu(open){
-      menuToggle.setAttribute('aria-expanded', String(open));
-      mobileMenu.style.display = open ? 'block' : 'none';
-      mobileMenu.setAttribute('aria-hidden', String(!open));
-      menuIcon.innerHTML = open ? '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M6 18L18 6" stroke-linecap="round"/></svg>' :
-                                  '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>';
-    }
-    menuToggle.addEventListener('click', ()=> setMenu(menuToggle.getAttribute('aria-expanded') === 'true' ? false : true));
-    window.addEventListener('resize', ()=> { if(window.innerWidth >= 768) setMenu(false); });
-
-    window.scrollToSection = function(id){
-      const el = document.getElementById(id);
-      if(!el) return;
-      el.scrollIntoView({behavior:'smooth',block:'start'});
-      if(menuToggle.getAttribute('aria-expanded') === 'true') setMenu(false);
-    };
-
-    window.addEventListener('load', ()=> {
-      document.querySelectorAll('image-with-fallback').forEach(c => c.init && c.init());
-    });
-
-    const heroBg = document.getElementById('heroBg');
-    if(heroBg){
-      const url = heroBg.style.backgroundImage.slice(5,-2);
-      const img = new Image();
-      img.src = url;
-      img.onload = ()=> heroBg.style.backgroundImage = 'url(\"' + img.src + '\")';
-    }
-  })();
-</script>
-
 </body>
 </html>
