@@ -1,0 +1,4 @@
+.checkmark {
+  color: var(--accent);
+  margin-right: var(--space-xs);
+}
