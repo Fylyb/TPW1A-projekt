@@ -8,10 +8,10 @@
     margin:0;
     font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
     background:var(--bg);
-    color:#fff;scroll-behavior:smooth
+    color:var(--color-text-on-accent);scroll-behavior:smooth
 }
   .container{
     max-width:var(--max-w);
     margin:0 auto;
-    padding:0 20px
+    padding:0 var(--space-l)
 }
