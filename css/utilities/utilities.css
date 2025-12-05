@@ -70,7 +70,7 @@
   display:flex;
   align-items:center;
   justify-content:space-between;
-  flex-wrap:wrap"
+  flex-wrap:wrap;
 }
 
 .disclaimer {
@@ -157,7 +157,11 @@
     transition: transform 0.35s ease;
 }
 
-@media (min-width:var(--breakpoint-md)) {
-  .grid.md-2 { grid-template-columns: repeat(2, 1fr); }
-  .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+@media (min-width: var(--breakpoint-md)) {
+  .grid.md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
