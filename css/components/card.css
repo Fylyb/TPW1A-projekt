@@ -100,4 +100,5 @@ grid.cols-3 > .pricing-card:hover {
   border-radius:var(--radius-pill);
   font-weight:var(--fw-bold);
   border:1px solid var(--accent-transparent-s)
-};
+}
+
