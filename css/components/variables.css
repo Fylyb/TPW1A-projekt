@@ -1,10 +1,92 @@
 :root{
+  --max-w:1200px;
+  --max-w-md: 680px;
+
+  --space-2xs: 4px;
+  --space-xs-minus: 6px;
+  --space-xs: 8px;
+  --space-s-minus: 10px;
+  --space-s: 12px;
+  --space-m: 16px;
+  --space-m-plus: 20px;
+  --space-l: 24px;
+  --space-l-plus: 28px;
+  --space-xl: 32px;
+  --space-xxl: 60px;
+  --space-xxl-plus: 72px;
+  --space-huge-minus: 80px;
+  --space-huge: 100px;
+
+  --space-neg-40: -40px;
+
+  --radius-m: 8px;
+  --radius-l: 10px;
+  --radius-xl: 18px;
+  --radius-pill: 999px;
+
+  --shadow-s: 10px;
+  --shadow-l: 30px;
+  --shadow-xl-hover: 40px;
+
+  --shadow-xl-hover: 0 12px 30px rgba(0,0,0,.55);
+
+  --fw-semibold-minus: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --filter-hero-bg: contrast(0.9) saturate(1.02);
+  --filter-icon-default: invert(1) brightness(2);
+
+  --lh-section-title: 1.1;
+  --ls-light: 0.2px;
+
+  --w-btn-default: 150px;
+
+  --size-font-base: 16px;
+  --size-font-lg: 20px;
+  --size-font-section-title: 28px;
+  --size-font-price: 34px;
+  --size-font-hero-h1: 44px;
+  --size-font-disclaimer: 30px;
+  --size-icon-s: 18px;
+  --size-icon-l: 48px;
+  --trainer-img-height: 240px;
+
+  --scale-l: 1.05;
+
+  --accent-dark: #c05621;
+  --accent-transparent-s: rgba(249,115,22,.2);
+  --bg:#000;
+  --bg-dark: #0b1220;
+  --bg-box-shadow: rgba(2,6,23,0.6);
+  --bg-transparent: rgba(0,0,0,0.85);
+  --color-border: rgba(249,115,22,.18);
+  --muted:#9ca3af;
+  --muted-light:#e5e7eb;
+  --accent:#f97316;
+  --color-bg-secondary: #18181B;
+  --color-bg-subtle: rgba(255,255,255,.02);
+  --color-border-subtle: rgba(255,255,255,.03);
+  --color-text-light: #cbd5e1;
+  --color-text-on-accent: #fff;
+  --color-border-subtle-dark: rgba(0,0,0,.08);
+  --color-bg-transparent-dark: rgba(0,0,0,0.6);
+  --color-warning: #FFD700;
+  --gradient-hero-overlay: linear-gradient(90deg,rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.82) 45%, rgba(0,0,0,0.35) 100%);
+
   --section-vertical: 96px;
   --section-vertical-lg: 120px;
   --section-gap-between: 28px;
   --section-intro-max: 780px;
-  --bg:#000;
-  --muted:#9ca3af;
-  --accent:#f97316;
-  --max-w:1200px;
+  --h-contact-col: 400px;
+  --h-contact-img: 360px;
+  --h-full-viewpoert: 100vh;
+  --h-nav-default: 60px;
+  --h-nav-large-offset: 120px;
+  --h-lg: 360px;
+  --h-map-default: 450px;
+  --h-trainer-img: 220px;
+  --max-w-trainer-intro: 720px;
+  --max-w-map: 900px;
+  --breakpoint-md: 768px;
 }
