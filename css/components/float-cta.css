@@ -1,18 +1,18 @@
-  .float-cta{
-   position:fixed;
-   left:20px;
-   bottom:20px;
-   z-index:90;
-   display:inline-flex;
-   align-items:center;
-   gap:10px;
-   padding:12px 16px;
-   border-radius:10px;
-   box-shadow:0 10px 30px rgba(0,0,0,.6);
-   transition:transform .14s ease,box-shadow .14s ease;
-  }
- .float-cta:hover{
-    transform:translateY(-3px);
-    box-shadow:0 16px 40px rgba(0,0,0,.7);
+.float-cta{
+  position:fixed;
+  left:var(--space-m-plus);
+  bottom:var(--space-m-plus);
+  z-index:90;
+  display:inline-flex;
+  align-items:center;
+  gap:var(--space-s-minus);
+  padding:var(--space-s) var(--space-m);
+  border-radius:var(--radius-l);
+  box-shadow:0 var(--shadow-s) var(--shadow-l) var(--bg);
+  transition:transform .14s ease,box-shadow .14s ease;
 }
- @media(max-width:480px){ .float-cta{left:12px;bottom:12px;padding:10px 12px} }
+.float-cta:hover{
+  transform:translateY(-3px);
+  box-shadow:0 var(--space-m) var(--shadow-l-hover) var(--bg);
+}
+@media(max-width:480px){ .float-cta{left:var(--space-s);bottom:var(--space-s);padding:var(--space-s-minus) var(--space-s)} }
